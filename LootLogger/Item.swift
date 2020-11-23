@@ -22,7 +22,7 @@ class Item : Equatable {
     
     convenience init(random: Bool = false){
         if random {
-            let adjective = ["Fluffy", "Rusty", "Shiny"]
+            let adjective = ["Fluffy", "Rusty", "Shiny", "Very long adjective so text will overlap cost and maybe even get to two lines"]
             let nouns = ["Bear", "Spork", "Mac"]
             
             let randomAdjective = adjective.randomElement()!
