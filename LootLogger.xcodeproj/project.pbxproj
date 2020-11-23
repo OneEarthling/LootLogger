@@ -17,6 +17,7 @@
 		CE351F2B2567F3F9004FDDEB /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE351F2A2567F3F9004FDDEB /* ItemsViewController.swift */; };
 		CE351F332567F52C004FDDEB /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE351F322567F52C004FDDEB /* Item.swift */; };
 		CE351F382567F7F8004FDDEB /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE351F372567F7F8004FDDEB /* ItemStore.swift */; };
+		CE351F3D256BB671004FDDEB /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE351F3C256BB671004FDDEB /* ItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		CE351F2A2567F3F9004FDDEB /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		CE351F322567F52C004FDDEB /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		CE351F372567F7F8004FDDEB /* ItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
+		CE351F3C256BB671004FDDEB /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				CE351F2A2567F3F9004FDDEB /* ItemsViewController.swift */,
 				CE351F322567F52C004FDDEB /* Item.swift */,
 				CE351F372567F7F8004FDDEB /* ItemStore.swift */,
+				CE351F3C256BB671004FDDEB /* ItemCell.swift */,
 			);
 			path = LootLogger;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			files = (
 				CE351F332567F52C004FDDEB /* Item.swift in Sources */,
 				CE351F2B2567F3F9004FDDEB /* ItemsViewController.swift in Sources */,
+				CE351F3D256BB671004FDDEB /* ItemCell.swift in Sources */,
 				CE351EF82567F117004FDDEB /* AppDelegate.swift in Sources */,
 				CE351F382567F7F8004FDDEB /* ItemStore.swift in Sources */,
 				CE351EFA2567F117004FDDEB /* SceneDelegate.swift in Sources */,
