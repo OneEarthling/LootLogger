@@ -15,6 +15,7 @@ class ItemsViewController: UITableViewController {
         super.init(coder: aDecoder)
         
         navigationItem.leftBarButtonItem = editButtonItem
+        //navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
     }
     
     override func viewDidLoad() {
