@@ -176,6 +176,11 @@
                                             <action selector="choosePhotoSource:" destination="Lwb-DK-P99" id="o8F-Si-tuY"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem title="Delete" image="clear" catalog="system" id="BVZ-l1-Ksk">
+                                        <connections>
+                                            <action selector="clearImage:" destination="Lwb-DK-P99" id="5Qs-NF-7xi"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -233,6 +238,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="clear" catalog="system" width="128" height="114"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

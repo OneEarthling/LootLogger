@@ -85,6 +85,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         if UIImagePickerController.isSourceTypeAvailable(.camera){
             let cameraAction = UIAlertAction(title: "Camera", style: .default, handler: { _ in
                 let imagePicker = self.imagePicker(for: .camera)
+                imagePicker.allowsEditing = true
                 self.present(imagePicker, animated: true, completion: nil)
             })
             alertController.addAction(cameraAction)
@@ -92,6 +93,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         
         let photoLibraryAction = UIAlertAction(title: "Photo Library", style: .default, handler: { _ in
             let imagePicker = self.imagePicker(for: .photoLibrary)
+            imagePicker.allowsEditing = true
             imagePicker.modalPresentationStyle = .popover
             imagePicker.popoverPresentationController?.barButtonItem = sender
             self.present(imagePicker, animated: true, completion: nil)
@@ -113,12 +115,19 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         // get picked image from info dictionary
-        let image = info[.originalImage] as! UIImage
+//        let image = info[.originalImage] as! UIImage
+        let image = info[.editedImage] as! UIImage
+        
         // store the image in the ImageStore for the item's key
         imageStore.setImage(image, forKey: item.itemKey)
         // put that image on the screen
         imageView.image = image
         // take imagepicker off screen
         dismiss(animated: true, completion: nil)
+    }
+    @IBAction func clearImage(_ sender: UIBarButtonItem) {
+        let itemKey = item.itemKey
+        imageStore.deleteImage(forKey: itemKey)
+        imageView.image = nil
     }
 }
