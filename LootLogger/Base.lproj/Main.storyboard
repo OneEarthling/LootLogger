@@ -89,7 +89,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9rd-Ia-vgF">
-                                <rect key="frame" x="20" y="96" width="374" height="758"/>
+                                <rect key="frame" x="20" y="96" width="374" height="709"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0PH-Nt-YQ3">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
@@ -149,21 +149,14 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="TOn-9R-Rdv">
-                                        <rect key="frame" x="0.0" y="126" width="374" height="632"/>
+                                        <rect key="frame" x="0.0" y="126" width="374" height="583"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" text="Date created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sru-Gv-YfW">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="602"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="583"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9J-5T-1vn">
-                                                <rect key="frame" x="0.0" y="602" width="374" height="30"/>
-                                                <state key="normal" title="Change date"/>
-                                                <connections>
-                                                    <action selector="changeDateTapped:" destination="Lwb-DK-P99" eventType="touchUpInside" id="HUH-at-309"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -172,14 +165,27 @@
                                     <constraint firstItem="UuX-oZ-zuk" firstAttribute="leading" secondItem="CdF-l3-GSz" secondAttribute="leading" id="SB4-Ca-jol"/>
                                 </constraints>
                             </stackView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="llW-4m-SXc">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem systemItem="camera" id="9ui-r5-EW8">
+                                        <connections>
+                                            <action selector="choosePhotoSource:" destination="Lwb-DK-P99" id="o8F-Si-tuY"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HeC-q2-Sav"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="llW-4m-SXc" firstAttribute="top" secondItem="9rd-Ia-vgF" secondAttribute="bottom" constant="8" id="2hu-Dm-KxO"/>
+                            <constraint firstItem="llW-4m-SXc" firstAttribute="leading" secondItem="L1C-4Q-vJy" secondAttribute="leading" id="47V-QA-jto"/>
+                            <constraint firstItem="HeC-q2-Sav" firstAttribute="bottom" secondItem="llW-4m-SXc" secondAttribute="bottom" id="Tcb-nV-hnS"/>
+                            <constraint firstAttribute="trailing" secondItem="llW-4m-SXc" secondAttribute="trailing" id="eFG-dI-pty"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9rd-Ia-vgF" secondAttribute="trailing" id="eem-5d-KiA"/>
                             <constraint firstItem="9rd-Ia-vgF" firstAttribute="top" secondItem="HeC-q2-Sav" secondAttribute="top" constant="8" id="hyl-z5-LcZ"/>
-                            <constraint firstItem="HeC-q2-Sav" firstAttribute="bottom" secondItem="9rd-Ia-vgF" secondAttribute="bottom" constant="8" id="j9e-LC-HW4"/>
                             <constraint firstItem="9rd-Ia-vgF" firstAttribute="leading" secondItem="L1C-4Q-vJy" secondAttribute="leadingMargin" id="rbV-cr-5SQ"/>
                         </constraints>
                         <connections>
