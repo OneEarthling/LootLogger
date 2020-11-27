@@ -17,12 +17,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         print(Bundle.main.bundlePath)
         guard let _ = (scene as? UIWindowScene) else { return }
         
+        //create an ImageStore
+        let imageStore = ImageStore()
         // create an ItemStore
         let itemStore = ItemStore()
         // access the ItemsViewController and set its item store
         let navController = window?.rootViewController as! UINavigationController
         let itemsController = navController.topViewController as! ItemsViewController
         itemsController.itemStore = itemStore
+        itemsController.imageStore = imageStore
     }
     
     func sceneWillResignActive(_ scene: UIScene) {
